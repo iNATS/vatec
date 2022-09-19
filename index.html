@@ -1,0 +1,1986 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+  <link rel="manifest" href="./manifest.json">
+
+  <!-- Title -->
+  <title>Vatec</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-156446909-2");
+    // Scroll to specific values
+    // scrollTo is the same
+    window.scroll({
+      top: 2500,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    // Scroll certain amounts from current position 
+    window.scrollBy({
+      top: 100, // could be negative value
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    // Scroll to a certain element
+    document.querySelector('.hello').scrollIntoView({
+      behavior: 'smooth'
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- MODALS -->
+  <!-- Example -->
+  <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <!-- Close -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Image -->
+          <div class="text-center">
+            <img src="./assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3"
+              style="width: 200px;">
+          </div>
+
+          <!-- Heading -->
+          <h2 class="fw-bold text-center mb-1" id="modalExampleTitle">
+            Schedule a demo with us
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-center text-muted mb-6 mb-md-8">
+            We can help you solve company communication.
+          </p>
+
+          <!-- Form -->
+          <form>
+            <div class="row">
+              <div class="col-12 col-md-6">
+
+                <!-- First name -->
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal"
+                    placeholder="First name">
+                  <label for="registrationFirstNameModal">First name</label>
+                </div>
+
+              </div>
+              <div class="col-12 col-md-6">
+
+                <!-- Last name -->
+                <div class="form-floating">
+                  <input type="text" class="form-control form-control-flush" id="registrationLastNameModal"
+                    placeholder="Last name">
+                  <label for="registrationLastNameModal">Last name</label>
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+
+                <!-- Email -->
+                <div class="form-floating">
+                  <input type="email" class="form-control form-control-flush" id="registrationEmailModal"
+                    placeholder="Email">
+                  <label for="registrationEmailModal">Email</label>
+                </div>
+
+              </div>
+              <div class="col-12 col-md-6">
+
+                <!-- Password -->
+                <div class="form-floating">
+                  <input type="password" class="form-control form-control-flush" id="registrationPasswordModal"
+                    placeholder="Password">
+                  <label for="registrationPasswordModal">Password</label>
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Submit -->
+                <button class="btn w-100 btn-primary mt-3 lift">
+                  Request a demo
+                </button>
+
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup: Horizontal  -->
+  <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog"
+    aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card card-row">
+          <div class="row gx-0">
+            <div class="col-12 col-md-6 bg-cover card-img-start"
+              style="background-image: url(./assets/img/photos/photo-8.jpg);">
+
+              <!-- Image (placeholder) -->
+              <img src="./assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+              <!-- Shape -->
+              <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor" />
+                </svg>
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card-body">
+
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <!-- Heading -->
+                <h2 class="mb-0 fw-bold text-center" id="modalSignupHorizontalTitle">
+                  Sign Up
+                </h2>
+
+                <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                  Simplify your workflow in minutes.
+                </p>
+
+                <!-- Form -->
+                <form class="mb-6">
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="modalSignupHorizontalEmail">
+                      Your email
+                    </label>
+                    <input type="email" class="form-control" id="modalSignupHorizontalEmail" placeholder="Your email">
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-5">
+                    <label class="visually-hidden" for="modalSignupHorizontalPassword">
+                      Create a password
+                    </label>
+                    <input type="password" class="form-control" id="modalSignupHorizontalPassword"
+                      placeholder="Create a password">
+                  </div>
+
+                  <!-- Submit -->
+                  <button class="btn w-100 btn-primary" type="submit">
+                    Sign up
+                  </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 fs-sm text-center text-muted">
+                  Already have an account? <a href="./signin-illustration.html">Log in</a>.
+                </p>
+
+              </div>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup: Vertical  -->
+  <div class="modal fade" id="modalSignupVertical" tabindex="-1" role="dialog"
+    aria-labelledby="modalSignupVerticalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card">
+
+          <!-- Close -->
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Image -->
+          <img src="./assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-white">
+              <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+
+            <!-- Heading -->
+            <h2 class="mb-0 fw-bold text-center" id="modalSignupVerticalTitle">
+              Sign Up
+            </h2>
+
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+              Simplify your workflow in minutes.
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6">
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="modalSignupVerticalEmail">
+                  Your email
+                </label>
+                <input type="email" class="form-control" id="modalSignupVerticalEmail" placeholder="Your email">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <label class="visually-hidden" for="modalSignupVerticalPassword">
+                  Create a password
+                </label>
+                <input type="password" class="form-control" id="modalSignupVerticalPassword"
+                  placeholder="Create a password">
+              </div>
+
+              <!-- Submit -->
+              <button class="btn w-100 btn-primary" type="submit">
+                Sign up
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 fs-sm text-center text-muted">
+              Already have an account? <a href="./signin-illustration.html">Log in</a>.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signin: Horizontal  -->
+  <div class="modal fade" id="modalSigninHorizontal" tabindex="-1" role="dialog"
+    aria-labelledby="modalSigninHorizontalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card card-row">
+          <div class="row gx-0">
+            <div class="col-12 col-md-6 bg-cover card-img-start"
+              style="background-image: url(./assets/img/photos/photo-1.jpg);">
+
+              <!-- Image (placeholder) -->
+              <img src="./assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+              <!-- Shape -->
+              <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor" />
+                </svg>
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card-body">
+
+                <!-- Close -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <!-- Heading -->
+                <h2 class="mb-0 fw-bold text-center" id="modalSigninHorizontalTitle">
+                  Sign In
+                </h2>
+
+                <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                  Simplify your workflow in minutes.
+                </p>
+
+                <!-- Form -->
+                <form class="mb-6">
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="visually-hidden" for="modalSigninHorizontalEmail">
+                      Your email
+                    </label>
+                    <input type="email" class="form-control" id="modalSigninHorizontalEmail" placeholder="Your email">
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-5">
+                    <label class="visually-hidden" for="modalSigninHorizontalPassword">
+                      Enter your password
+                    </label>
+                    <input type="password" class="form-control" id="modalSigninHorizontalPassword"
+                      placeholder="Enter your password">
+                  </div>
+
+                  <!-- Submit -->
+                  <button class="btn w-100 btn-primary" type="submit">
+                    Sign in
+                  </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 fs-sm text-center text-muted">
+                  Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
+                </p>
+
+              </div>
+            </div>
+
+          </div> <!-- / .row -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signin: Vertical  -->
+  <div class="modal fade" id="modalSigninVertical" tabindex="-1" role="dialog"
+    aria-labelledby="modalSigninVerticalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="card">
+
+          <!-- Close -->
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Image -->
+          <img src="./assets/img/photos/photo-21.jpg" alt="..." class="card-img-top">
+
+          <!-- Shape -->
+          <div class="position-relative">
+            <div class="shape shape-bottom shape-fluid-x text-white">
+              <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body">
+
+            <!-- Heading -->
+            <h2 class="mb-0 fw-bold text-center" id="modalSigninVerticalTitle">
+              Sign In
+            </h2>
+
+            <!-- Text -->
+            <p class="mb-6 text-center text-muted">
+              Simplify your workflow in minutes.
+            </p>
+
+            <!-- Form -->
+            <form class="mb-6">
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="modalSigninVerticalEmail">
+                  Your email
+                </label>
+                <input type="email" class="form-control" id="modalSigninVerticalEmail" placeholder="Your email">
+              </div>
+
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <label class="visually-hidden" for="modalSigninVerticalPassword">
+                  Enter your password
+                </label>
+                <input type="password" class="form-control" id="modalSigninVerticalPassword"
+                  placeholder="Enter your password">
+              </div>
+
+              <!-- Submit -->
+              <button class="btn w-100 btn-primary" type="submit">
+                Sign in
+              </button>
+
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 fs-sm text-center text-muted">
+              Don't have an account yet? <a href="./signin-illustration.html">Sign up</a>.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment -->
+  <div class="modal fade" id="modalPayment" tabindex="-1" role="dialog" aria-labelledby="modalPaymentTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <!-- Close -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <!-- Heading -->
+          <h2 class="fw-bold text-center mb-1" id="modalPaymentTitle">
+            Add Payment
+          </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-center text-muted mb-6 mb-md-8">
+            Simplify your workflow in minutes.
+          </p>
+
+          <!-- Form -->
+          <form>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentName">Name on card</label>
+              <input class="form-control" id="modalPaymentName" type="text" placeholder="First Last">
+            </div>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentNumbber">Card number</label>
+              <input class="form-control" id="modalPaymentNumbber" type="number" placeholder="4242 4242 4242 4242">
+            </div>
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="modalPaymentDate">Exp. Date</label>
+              <input class="form-control" id="modalPaymentDate" type="text" placeholder="03/2023">
+            </div>
+
+            <!-- Submit -->
+            <button class="btn w-100 btn-primary mt-3 lift">
+              Add Payment Method
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+    <div class="container-fluid">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="assets/img/logos/logo.png" class="navbar-brand-img">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#principal">
+              ِAccueil
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#qui-sommes-nous">
+              Qui sommes nous
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#nos-services">
+              Nos services
+            </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#clients">
+              Clients
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#communication">
+              Communication
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <section id="principal" class="border-bottom">
+    <div class="container">
+      <div class="row align-items-stretch">
+
+
+
+
+        <div class="col-12 col-md-6 offset-md-1 order-md-2">
+
+          <!-- Slider (mobile) -->
+          <div class="d-md-none img-cover" data-flickity='{"imagesLoaded": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false}'>
+            <div class="w-100">
+
+              <!-- Image -->
+              <img src="assets/img/elements/cover1-2.png" class="img-fluid">
+
+            </div>
+            <div class="w-100">
+
+              <!-- Image -->
+              <img src="assets/img/elements/Asset28.png" class="img-fluid">
+
+            </div>
+            <div class="w-100">
+
+              <!-- Image -->
+              <img src="assets/img/elements/Asset35.png" class="img-fluid">
+
+            </div>
+          </div>
+
+          <!-- Slider -->
+          <div class="position-relative h-100 vw-50 d-none d-md-block" data-aos="fade-left">
+
+            <!-- Slider -->
+            <div class="flickity-button-bottom flickity-button-white h-100 w-100" data-flickity='{"imagesLoaded": true, "setGallerySize": false, "wrapAround": true, "pageDots": false}'>
+              <div class="w-100 h-100 bg-cover" style="background-image: url(assets/img/elements/cover1-2.png);"></div>
+              <div class="w-100 h-100 bg-cover" style="background-image: url(assets/img/elements/Asset28.png);"></div>
+              <div class="w-100 h-100 bg-cover" style="background-image: url(assets/img/elements/Asset35.png);"></div>
+            </div>
+
+            <!-- Shape -->
+            <div class="shape shape-start shape-fluid-y svg-shim text-white">
+              <svg viewBox="0 0 100 1544" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v386l-50 772v386H0V0z" fill="currentColor"/></svg>              </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-5 py-8 py-md-14 order-md-1 aos-init aos-animate" data-aos="fade-right">
+
+          <!-- Heading -->
+          <h1 class="display-5">Notre société, très bien implantée <span class="text-primary">depuis plus de 30
+              ans.</span>
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-muted mb-6 mb-md-8">secteur en tant que spécialiste Climatisation, Ventilation,
+            Désenfumage, Protection et lutte contre incendie sous toutes ses formes, s’adresse à une clientèle
+            essentiellement de professionnels mais également de particuliers.</p>
+
+          <!-- Text -->
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <section class="pt-8 pt-md-11 pb-8 pb-md-11 bg-light" id="qui-sommes-nous">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 col-lg-7">
+
+          <!-- Screenshot -->
+          <div class="mb-8 mb-md-0">
+
+            <!-- Image -->
+            <img src="assets/img/photos/build.jpeg" alt="..."
+              class="screenshot img-fluid mw-md-110 float-end me-md-6 mb-6 mb-md-0">
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5">
+
+          <!-- List -->
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>1</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Secteur Tertiaire
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>2</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Secteur Industriel
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>3</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Résidentiels (logements, villas)
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>4</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Hôtellerie et tourisme
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>5</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Centres financier, banques
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>6</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Aaéroports et gares
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>7</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Entrepôts frigorifiques
+
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>8</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                centres commerciaux et administratifs
+
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+          <div class="d-flex">
+
+            <!-- Badge -->
+            <div class="badge badge-lg badge-rounded-circle bg-primary-soft mt-1">
+              <span>9</span>
+            </div>
+
+            <!-- Body -->
+            <div class="ms-5">
+
+              <!-- Heading -->
+              <h3 class="mb-6">
+                Hôspitalier, cliniques, usines pharmaceutiques
+              </h3>
+
+              <!-- Text -->
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- PROCESS -->
+  <section id="nos-services" class="pt-8 pt-md-11">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-6">
+
+
+          <!-- Heading -->
+          <h2>
+            Nous vous accompagnons.
+          </h2>
+
+          <!-- Text -->
+          <p class="text-muted mb-6 mb-md-0">
+            En effet, nous vous accompagnons dans votre recherche de solutions de Climatisation, Ventilation,
+            Désenfumage, Protection et lutte contre incendie ... <br> Notre but est de nous porter à l’écoute de votre
+            projet.
+            Ainsi nous sommes en mesure d’apporter les solutions les plus efficaces et économiques pour votre confort et
+            également pour votre budget.
+            Bien évidemment VATEC Contractor entretien, dépanne, effectue la maintenance de vos installations.
+          </p>
+
+        </div>
+        <div class="col-12 col-md-6 col-xl-5">
+
+          <div class="row gx-0">
+            <div class="col-4">
+
+              <!-- Image -->
+              <div class="w-150 mt-9 p-1 bg-white shadow-lg aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="100">
+                <img src="assets/img/elements/cover3.png" class="img-fluid" alt="...">
+              </div>
+
+            </div>
+            <div class="col-4">
+
+              <!-- Image -->
+              <div class="w-150 p-1 bg-white shadow-lg aos-init aos-animate" data-aos="fade-up">
+                <img src="assets/img/elements/Asset31.png" class="img-fluid" alt="...">
+              </div>
+
+            </div>
+            <div class="col-4 position-relative">
+
+              <!-- Image -->
+              <div class="w-150 mt-11 float-end p-1 bg-white shadow-lg aos-init aos-animate" data-aos="fade-up"
+                data-aos-delay="150">
+                <img src="assets/img/elements/Asset34.png" class="img-fluid" alt="...">
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section class="pt-8 pt-md-11 mb-8">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/wind-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Climatisation</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/heater-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Chauffage</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/extractor-100.png">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Désenfumage</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/fire-extinguisher-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Protection incendie</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/fire-alarm-box-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Sécurité Incendie</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/sprinkles-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Sprinklers</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/plumbing-100.png" alt="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Plomberie</h3>
+
+          <!-- Text -->
+
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 text-center aos-init aos-animate" data-aos="fade-up">
+
+          <!-- Icon -->
+          <div class="icon icon-lg mb-4">
+            <img src="./assets/img/icons/services/conflict-100.png" alt="" srcset="">
+          </div>
+
+          <!-- Heading -->
+          <h3 class="fw-bold mb-8">Courants faibles</h3>
+
+          <!-- Text -->
+
+
+        </div>
+      </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-8 py-md-11 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2>
+            <span class="text-primary">Découvrez</span> nos valeurs.
+          </h2>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+
+          <!-- Card -->
+          <div class="accordion" id="featuresAccordion">
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#featuresOne"
+                aria-expanded="true" aria-controls="featuresOne">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresOneHeading">LA RIGUEUR</p>
+
+                  <!-- Text -->
+
+
+                </div>
+
+                <!-- Badge -->
+
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse show" id="featuresOne" aria-labelledby="featuresOneHeading"
+                data-bs-parent="#featuresAccordion">
+                <div class="accordion-body">
+                  <p class="text-muted">Soucieux et scrupuleux de la qualité de nos prestations nous mettons tout en
+                    œuvre pour réaliser le
+                    suivi des projets de nos clients en passant par différentes étapes :
+
+                  </p>
+                  <ul class="card-list list mb-0 text-muted">
+                    <li>
+                      Accueil
+                    </li>
+                    <li>
+                      Étude
+                    </li>
+                    <li>
+                      Réalisation
+                    </li>
+                    <li>
+                      Service après-vente
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#featuresTwo"
+                aria-expanded="true" aria-controls="featuresTwo">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresTwoHeading">LE RESPECT</p>
+
+                  <!-- Text -->
+
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse" id="featuresTwo" aria-labelledby="featuresTwoHeading"
+                data-bs-parent="#featuresAccordion" style="">
+                <div class="accordion-body">
+                  <p class="text-muted">C’est une valeur fondamentale chez VATEC Contractor et nous y veillons tout
+                    particulièrement. <br>
+                    Nous avons conscience de l‘influence de notre propre comportement sur les autres. <br>
+                    Un bonjour, un sourire, un café... sont les premiers contacts que peuvent avoir nos équipes avec nos
+                    clients, ce n’est pas grand-chose, tout le monde aime ça et le mérite.</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                data-bs-target="#featuresThree" aria-expanded="false" aria-controls="featuresThree">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresThreeHeading">
+                    LA CONFIANCE </p>
+
+                  <!-- Text -->
+
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse" id="featuresThree" aria-labelledby="featuresThreeHeading"
+                data-bs-parent="#featuresAccordion" style="">
+                <div class="accordion-body">
+                  <p class="text-muted">Nous sommes solidaires en cas de surcharge de travail en nous aidant
+                    mutuellement. <br>
+                    Nous avons confiance en nos collaborateurs, nos collègues, nos fournisseurs et bien entendu nos
+                    clients avec qui nous agissons en toute transparence. <br>
+                    Pour nos équipes, il s’agit de la valeur la plus importante.</p>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="accordion-item">
+
+              <!-- Button -->
+              <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse"
+                data-bs-target="#featuresFour" aria-expanded="false" aria-controls="featuresFour">
+                <div class="me-auto">
+
+                  <!-- Title -->
+                  <p class="fw-bold mb-0" id="featuresFourHeading">
+                    L’ESPRIT D’ÉQUIPE </p>
+
+                  <!-- Text -->
+
+
+                </div>
+
+              </div>
+
+              <!-- Collapse -->
+              <div class="accordion-collapse collapse" id="featuresFour" aria-labelledby="featuresFourHeading"
+                data-bs-parent="#featuresAccordion" style="">
+                <div class="accordion-body">
+                  <p class="text-muted">La communication est primordiale et est le moteur de notre société. <br>
+                    Nous sommes tous complémentaires : <br> chacun a nécessairement « besoin » de l’autre en vue
+                    d’effectuer
+                    correctement son travail. <br> Nous comprenons tous l’importance de nous remettre en question
+                    individuellement et sommes tous tournés vers un même but : <br> la satisfaction client & le travail
+                    bien
+                    fait</p>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE -->
+  <div class="position-relative mt-n16">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor" />
+      </svg>
+    </div>
+  </div>
+  <div class="pt-16 bg-dark"></div>
+
+  <!-- ARTICLES -->
+  <section id="clients" class="pt-8 pt-md-11">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Heading -->
+          <h2 class="mb-0">
+            Précédent travail </h2>
+
+          <!--  -->
+          <p class="mb-5 text-muted">
+            Découvrez les secteurs avec lesquels nous sommes honorés de travailler </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-6">
+            <div class="row gx-0">
+              <a class="col-12 col-md-6 order-md-2 bg-light card-img-end"
+                style="background-image: url(assets/img/logos/Logo_du_ministère_de_la_défense_nationale.png); min-height: 400px; background-repeat: no-repeat; background-position: center;"
+                href="#!">
+
+                <!-- Image (placeholder) -->
+                <img src="assets/img/photos/photo-27.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+                <!-- Shape -->
+                <div class="shape shape-start shape-fluid-y text-white d-none d-md-block">
+                  <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h62.759v172C38.62 384 112 517 112 517v173H0V0z" fill="currentColor" />
+                  </svg>
+                </div>
+
+              </a>
+              <div class="col-12 col-md-6 order-md-1">
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    MINISTERE DE LA DEFENSE NATIONALE
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    <ul class="text-muted">
+                      <li style="font-size:12px;">Salle Omnisport, CFT Ain Nâadja.</li>
+                      <li style="font-size:12px;">Centre de documentation, (H.C.A) Ain Nâadja.</li>
+                      <li style="font-size:12px;">Ministère des Finances.</li>
+                      <li style="font-size:12px;">Groupement de Protection et de Sécurité, (GPS) Ain Nâadja HCA.</li>
+                      <li style="font-size:12px;">Salle de réception et de réunion, Beni Messous.</li>
+                      <li style="font-size:12px;">Centre de Transfusion Sanguine, (C.T.S) Ain Nâadja HCA.
+                      <li style="font-size:12px;">Hôpital Militaire de Rééducation de Staoueli.</li>
+                      <li style="font-size:12px;">Commandement des Forces Aériennes, (CFA) Chéraga.</li>
+                      <li style="font-size:12px;">EST Bois de Boulogne, Hydra.</li>
+                      <li style="font-size:12px;">Ecole Polytechnique Dortoirs, Bordj El Bahri.</li>
+                      <li style="font-size:12px;">Ecole Polytechnique Centre de documentation Bordj El Bahri.
+                      <li style="font-size:12px;">Hôpital Militaire Régional Universitaire ORAN.</li>
+                      <li style="font-size:12px;">Hôpital Militaire Régional Universitaire CONSTANTINE.</li>
+                      <li style="font-size:12px;">Centre National d’Expertise Médicale du Personnel Navigant, HCA
+                        Ain Nâadja.</li>
+                      <li style="font-size:12px;">300 logements, HMRU /ORAN.</li>
+                      <li style="font-size:12px;">Hôtel Militaire / CAMSSP/ HCA /Ain Nâadja. </li>
+                      <li style="font-size:12px;">Commandement Etat Major CEM / MDN.</li>
+                      <li style="font-size:12px;">Direction des Transmissions Militaires, sites de Ouargla et de
+                        Laghouat.
+                      </li>
+                      <li style="font-size:12px;">AFSI, Gendarmerie Nationale.</li>
+                      <li style="font-size:12px;">CFDAT Alger</li>
+                      <li style="font-size:12px;">ENPEI ROUIBA</li>
+                    </ul>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div> <!-- / .row -->
+          </div>
+
+          <div class="row  pb-6">
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+              <!-- Card -->
+              <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                <!-- Image -->
+                <a class="card-img-top bg-light" href="#!">
+
+                  <!-- Image -->
+                  <img src="assets/img/logos/1.png" alt="..." class="card-img-top">
+
+                  <!-- Shape -->
+                  <div class="position-relative">
+                    <div class="shape shape-bottom shape-fluid-x text-white">
+                      <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                </a>
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    GENDARMERIE NATIONALE
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    <ul class="text-muted">
+                      <li style="font-size:12px;">Dortoirs Commandement, Gendarmerie nationale Chéraga.</li>
+                      <li style="font-size:12px;">Celibatorium Ecole de la Gendarmerie nationale Zéralda.</li>
+                      <li style="font-size:12px;">Etat Major, Gendarmerie Nationale.</li>
+                      <li style="font-size:12px;">Résidences Commandement, Gendarmerie nationale Chéraga.</li>
+                    </ul>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+              <!-- Card -->
+              <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                <!-- Image -->
+                <a class="card-img-top bg-white" href="#!">
+
+                  <!-- Image -->
+                  <img src="assets/img/logos/2.png" alt="..." class="card-img-top">
+
+                  <!-- Shape -->
+                  <div class="position-relative">
+                    <div class="shape shape-bottom shape-fluid-x text-white">
+                      <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                </a>
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    SONELGAZ /ABB
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    <ul class="text-muted">
+                      <li style="font-size:12px;">Centre Régional de Conduite (CRC) Annaba.</li>
+                      <li style="font-size:12px;">Centre Régional de Conduite (CRC) Oran.</li>
+                      <li style="font-size:12px;">Centre Régional de Conduite (CRC) Sétif.</li>
+                      <li style="font-size:12px;">Centre National de Conduite (CRC) Gué de Constantine Alger</li>
+                    </ul>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+              <!-- Card -->
+              <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                <!-- Image -->
+                <a class="card-img-top bg-light" href="#!">
+
+                  <!-- Image -->
+                  <img src="assets/img/logos/3.png" alt="..." class="card-img-top">
+
+                  <!-- Shape -->
+                  <div class="position-relative">
+                    <div class="shape shape-bottom shape-fluid-x text-white">
+                      <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                </a>
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    GENDARMERIE NATIONALE
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    <ul class="text-muted">
+                      <li style="font-size:12px;"> Centre de Transfusion Sanguine de l’Hôpital Central de l’Armé Ain
+                        Nâadja</li>
+                      <li style="font-size:12px;">Hôpital Militaire Régional d’Oran (HMRUO)</li>
+                      <li style="font-size:12px;">Hôpital Militaire Régional de Constantine (HMRUC)</li>
+                      <li style="font-size:12px;">Centre National d’Expertise et de la Navigation Aérienne (HCA)</li>
+                      <li style="font-size:12px;">Hôpital 240 Lits LAGHOUAT (INSO)</li>
+                      <li style="font-size:12px;">Hôpital 120 Lits LAGHOUAT (COSIDER)</li>
+
+                    </ul>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <!-- Card -->
+          <div class="card card-row shadow-light-lg mb-6">
+            <div class="row gx-0">
+              <div class="col-12">
+
+              </div>
+              <a class="col-12 col-md-6 bg-light card-img-start"
+                style="background-image: url(assets/img/logos/golden-logo.png); background-size: 60% auto; min-height: 400px;  background-repeat: no-repeat; background-position: center;"
+                href="#!">
+
+                <!-- Shape -->
+                <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                  <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor" />
+                  </svg>
+                </div>
+
+              </a>
+              <div class="col-12 col-md-6">
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    ETABLISSEMENT RECEVANT PUBLIC
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    <ul class="text-muted">
+                      <li style="font-size:12px;">Arab Banking Company Dély-Ibrahim.</li>
+                      <li style="font-size:12px;">Tour DAHLI Mohammadia</li>
+                      <li style="font-size:12px;">Alger.</li>
+                      <li style="font-size:12px;">Salle Omnisport « HARCHA » ALGER.</li>
+                      <li style="font-size:12px;">Laboratoire NOVONORDISK.</li>
+                      <li style="font-size:12px;">Cité Universitaire Ouled Fayet (DLEP, Wilaya d’Alger).</li>
+                      <li style="font-size:12px;">Ensemble de bureaux à Hydra.</li>
+                      <li style="font-size:12px;">Lycée Technique Ruisseau (DLEP, Wilaya d’Alger).</li>
+                      <li style="font-size:12px;">Piscine Semi Olympique KOUBA.</li>
+                      <li style="font-size:12px;">Direction Générale Arab Bank Alger</li>
+                      <li style="font-size:12px;">Agence Arab bank Annaba</li>
+                      <li style="font-size:12px;">Agence Al Salam Bank Sétif</li>
+                      <li style="font-size:12px;">Hôtel 04 étoiles Boubaya</li>
+                      <li style="font-size:12px;">Laboratoire Pharmalliance</li>
+                      <li style="font-size:12px;">Centre Commercial & Loisirs Bab Ezzouar</li>
+                      <li style="font-size:12px;">Centre Commercial & Loisirs Es-Senia</li>
+                    </ul>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE -->
+  <div class="position-relative mt-n8">
+    <div class="shape shape-bottom shape-fluid-x text-light">
+      <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z"
+          fill="currentColor" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- cards header -->
+  <section class="pt-8 pt-md-11 pb-8 pb-md-11 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h1>
+            Partenaires de réussite </h1>
+
+          <!-- Text -->
+          <p class="fs-lg text-gray-700 mb-7 mb-md-9">
+            Apprenez à connaître nos partenaires de réussite </p>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- cards body -->
+  <section class="py-8 py-md-11 mt-n10 mt-md-n14 bg-light">
+    <div class="container">
+      <div class="row" id="portfolio" data-isotope="{&quot;layoutMode&quot;: &quot;masonry&quot;}"
+        style="position: relative; height: 965.421px;">
+        <div class="col-12 col-md-4 resources" style="position: absolute; left: 0px; top: 0px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/12660_7.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">TOUR DAHLI Mohammadia - Alger</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product" style="position: absolute; left: 346.656px; top: 0px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/49791-l-hopital-militaire-universitaire-regional-d-oran.jpg"
+                alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">Hôpital Militaire Régional Universitaire d’ORAN</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 resources" style="position: absolute; left: 693.312px; top: 0px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/500bureaux_5ddcf780107c27.94485956.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">CENTRE DE GUE DE CONSTANTINE DE CONDUITE ET DISPATCHING D’ELECTRICITE ABB / SONELGAZ
+                  </h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux" style="position: absolute; left: 346.656px; top: 241.234px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/CAC-660x400.png" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">CENTRE ANTI-CANCEREUX BATNA</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux" style="position: absolute; left: 693.312px; top: 244.438px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/BAB-EZZOUAR.jpeg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">CENTRE COMMERCIAL DE LOISIRS DE BAB EZZOUAR </h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product" style="position: absolute; left: 346.656px; top: 467.078px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/coure-supreme.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">COUR SUPREME EL BIAR - ALGER</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product" style="position: absolute; left: 693.312px; top: 472.797px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/essenia.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">CENTRE COMMERCIAL DE LOISIRS ES-SENIA (ORAN)</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux" style="position: absolute; left: 0px; top: 499.984px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/musee.jpeg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">MUSEE DES ARTS MODERNES D’ALGER (MAMA)</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux" style="position: absolute; left: 346.656px; top: 695.437px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/img_622a041f39dad.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">MINISTERE DE L’ENERGIE ET DES MINES</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 resources" style="position: absolute; left: 0px; top: 0px;">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/clint/CENTRE NATIONAL.png" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+                  </svg>
+                </div>
+
+                <!-- Preheading -->
+
+
+                <!-- Heading -->
+                <h5 class="mb-0">CENTRE NATIONAL D’EXPERTISE MEDICALE DU PERSONNEL NAVIGANT (CNEMPN) - AIN NAADJA</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- shap -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-white">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+
+
+  <!-- form -->
+  <section id="communication" class="pt-8 pt-md-11 pb-8 pb-md-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2 class="fw-bold">
+            Nous sommes là pour vous aider! </h2>
+
+          <!-- Text -->
+          <p class="fs-lg text-muted mb-7 mb-md-9">
+            Nous voulons toujours avoir de vos nouvelles ! Faites-nous savoir comment nous pouvons vous aider au mieux
+            et nous ferons de notre mieux. </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10">
+
+          <!-- Info -->
+          <section class="py-7 py-md-9 border-gray-300" id="info">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-4 text-center border-end border-gray-300">
+
+                  <!-- Heading -->
+                  <h4 class="text-uppercase text-gray-700 mb-1">
+                    Mobile
+                  </h4>
+
+                  <!-- Link -->
+                  <div class="mb-5 mb-md-0">
+                    <a href="#!" class="h5 text-primary">
+                      0541 88 39 53 / 0542 37 92 97
+                    </a>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-4 text-center border-end border-gray-300">
+
+                  <!-- Heading -->
+                  <h4 class="text-uppercase text-gray-700 mb-1">
+                    Tél / Fax
+                  </h4>
+
+                  <!-- Link -->
+                  <div class="mb-5 mb-md-0">
+                    <a href="#!" class="h5">
+                      023.33.24.73 / 023.33.26.24
+                    </a>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-4 text-center">
+
+                  <!-- Heading -->
+                  <h4 class="text-uppercase text-gray-700 mb-1">
+                    E-mail
+                  </h4>
+
+                  <!-- Link -->
+                  <a href="#!" class="h5">
+                    mail_vatec@yahoo.com
+                  </a>
+
+                </div>
+              </div> <!-- / .row -->
+            </div>
+          </section>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+
+  <!-- map -->
+  <div class="row">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14453494.813026031!2d-7.350292548386185!3d27.819457436344383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e8a6a28037bd1%3A0x7140bee3abd7f8a2!2sAlgeria!5e0!3m2!1sen!2slt!4v1663488469974!5m2!1sen!2slt"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+
+
+</body>
+
+</html>
